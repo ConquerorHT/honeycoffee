@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Honey Coffee</title>
+ <style>
+  :root {
+    --bg: #000;
+    --card-bg: #111;
+    --text-main: #eee;
+    --text-sub: #aaa;
+    --accent: #fc0;
+    --white: #fff;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text-main);
+  }
+
+  nav {
+    background-color: var(--card-bg);
+    padding: 1rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(255,255,255,0.05);
+  }
+
+  nav .logo {
+    font-size: 1.8rem;
+    color: var(--accent);
+    font-weight: bold;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  nav ul li a:hover {
+    color: var(--accent);
+  }
+
+  header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: var(--card-bg);
+    box-shadow: 0 2px 15px rgba(255,255,255,0.1);
+  }
+
+  header h1 {
+    font-size: 3rem;
+    letter-spacing: 4px;
+  }
+
+  header p {
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    color: var(--accent);
+    font-style: italic;
+  }
+
+  .banner {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--white);
+    color: #000;
+    padding: 4rem 2rem;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .banner .text {
+    flex: 1 1 300px;
+  }
+
+  .banner .text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .banner .text p {
+    font-size: 1rem;
+    color: #444;
+    max-width: 600px;
+  }
+
+  .banner img {
+    flex: 1 1 300px;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border: 1px solid #333;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(255,255,255,0.1);
+  }
+
+  .card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.4s ease;
+  }
+
+  .card:hover img {
+    filter: grayscale(0%);
+  }
+
+  .card-content {
+    padding: 1.5rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .card-content p {
+    font-size: 1rem;
+    color: var(--text-sub);
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: var(--card-bg);
+    color: var(--text-sub);
+    margin-top: 3rem;
+    border-top: 1px solid #222;
+  }
+
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2rem;
+    }
+
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .banner {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .banner .text,
+    .banner img {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+
+    .container {
+      padding: 1.5rem 1rem;
+    }
+  }
+</style>
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Honey Coffee</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="file:///H:/websites/brusescnavas/shop.html">Shop</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Honey Coffee</h1>
+    <h2><p>Honey ki Gandi Coffee</p></h2>
+  </header>
+
+  <!-- White Banner -->
+  <section class="banner">
+    <div class="text">
+      <h1>Our Love for Coffee</h1>
+      
+	  <h2><p>
+        At Honey Coffee, we mix bold flavors with rebellious energy. Whether it's the smoothness of a latte or the punch of an espresso, our drinks are crafted with unapologetic character—because boring coffee is criminal.
+      </p></h2>
+    </div>
+    <img src="https://media.istockphoto.com/id/2008302618/photo/young-man-enjoying-in-a-first-cup-of-coffee-for-a-day.jpg?s=612x612&w=0&k=20&c=uJUulv3sX3w6eB8oyMDhjNSICygmlIim1rCNFLkRRP4=" alt="Coffee Banner">
+  </section>
+
+  <!-- Coffee Cards -->
+  <div class="container">
+    <!-- Cappuccino -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80" alt="Cappuccino">
+      <div class="card-content">
+        <h3>Cappuccino</h3>
+        <p>Foamy, creamy, and just the right kick of caffeine and flavor.</p>
+      </div>
+    </div>
+
+    <!-- Latte -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1561882468-9110e03e0f78?auto=format&fit=crop&w=600&q=80" alt="Latte">
+      <div class="card-content">
+        <h3>Latte</h3>
+        <p>Milky smoothness blended with rich espresso and subtle sweetness.</p>
+      </div>
+    </div>
+
+    <!-- Espresso -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&q=80" alt="Espresso">
+      <div class="card-content">
+        <h3>Espresso</h3>
+        <p>Pure, bold, and intense. The soul of coffee in one perfect shot.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Honey Coffee. All Rights Reserved.
+  </footer>
+
+</body>
+</html>

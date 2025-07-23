@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop - Honey Coffee</title>
+  <style>
+    :root {
+      --bg: #000;
+      --card-bg: #111;
+      --text-main: #eee;
+      --text-sub: #aaa;
+      --accent: #fc0;
+      --white: #fff;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text-main);
+    }
+
+    nav {
+      background-color: var(--card-bg);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(255,255,255,0.05);
+    }
+    nav .logo {
+      font-size: 1.8rem;
+      color: var(--accent);
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: var(--accent);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      padding: 2rem 1rem 1rem;
+      color: var(--accent);
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid #333;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px rgba(255,255,255,0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: filter 0.4s ease;
+    }
+
+    .card:hover img {
+      filter: grayscale(0%);
+    }
+
+    .card-content {
+      padding: 1.5rem;
+    }
+
+    .card-content h3 {
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .card-content p {
+      font-size: 1rem;
+      color: var(--text-sub);
+      margin-bottom: 0.8rem;
+    }
+
+    .price {
+      font-weight: bold;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+    }
+
+    .buy-btn {
+      background-color: var(--accent);
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .buy-btn:hover {
+      background-color: #e6c200;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: var(--card-bg);
+      color: var(--text-sub);
+      margin-top: 3rem;
+      border-top: 1px solid #222;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .card-content h3 {
+        font-size: 1.2rem;
+      }
+
+      .card-content p,
+      .price {
+        font-size: 0.95rem;
+      }
+
+      .buy-btn {
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Honey Coffee</div>
+    <ul>
+      <li><a href="file:///H:/websites/brusescnavas/coffee.html">Home</a></li>
+      <li><a href="#">Shop</a></li>
+    </ul>
+  </nav>
+
+  <!-- Shop Title -->
+  <h1>Shop Our Coffees</h1>
+
+  <!-- Coffee Cards -->
+  <div class="container">
+
+    <!-- Cappuccino -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80" alt="Cappuccino">
+      <div class="card-content">
+        <h3>Cappuccino</h3>
+        <p>Foamy and bold, with just the right kick.</p>
+        <div class="price">$3.00</div>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Latte -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1561882468-9110e03e0f78?auto=format&fit=crop&w=600&q=80" alt="Latte">
+      <div class="card-content">
+        <h3>Latte</h3>
+        <p>Smooth milk with rich espresso blend.</p>
+        <div class="price">$3.50</div>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Espresso -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&q=80" alt="Espresso">
+      <div class="card-content">
+        <h3>Espresso</h3>
+        <p>Pure, bold and intense — a true coffee shot.</p>
+        <div class="price">$2.50</div>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Mocha -->
+    <div class="card">
+      <img src="file:///H:/websites/brusescnavas/images/mocha.png" alt="Mocha">
+      <div class="card-content">
+        <h3>Mocha</h3>
+        <p>Chocolatey coffee topped with whipped cream.</p>
+        <div class="price">$4.00</div>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Americano -->
+    <div class="card">
+      <img src="file:///H:/websites/brusescnavas/images/americano.png" alt="Americano">
+      <div class="card-content">
+        <h3>Americano</h3>
+        <p>Smooth espresso with hot water. No milk.</p>
+        <div class="price">$2.75</div>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Macchiato -->
+    <div class="card">
+      <img src="file:///H:/websites/brusescnavas/images/macchiato.png" alt="Macchiato">
+      <div class="card-content">
+        <h3>Macchiato</h3>
+        <p>Espresso with a dash of frothy milk.</p>
+        <div class="price">$3.20</div>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Honey Coffee. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
